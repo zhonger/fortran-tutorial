@@ -1,17 +1,18 @@
+const isI18nStaging = process.env.I18N_STAGING === 'true';
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Fortran 从入门到实践',
+  tagline: '从零开始你的 Fortran 之旅',
+  url: 'https://fortran-tutorial.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'zhonger', // Usually your GitHub org/user name.
+  projectName: 'fortran-tutorial', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Fortran 从入门到实践',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -21,12 +22,13 @@ module.exports = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Tutorial',
+          label: '入门实践',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog', label: '博客', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://github.com/zhonger/fortran-tutorial',
+          'aria-label': 'GitHub',
+          className: 'header-github-link',
           position: 'right',
         },
       ],
@@ -35,33 +37,16 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '文档',
           items: [
             {
-              label: 'Tutorial',
+              label: '开始页',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
+          title: '更多',
           items: [
             {
               label: 'Blog',
@@ -69,12 +54,12 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/zhonger/fortran-tutorial',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `版权所有 © ${new Date().getFullYear()} zhonger, 此网站使用 Docusaurus 构建。 `,
     },
   },
   presets: [
@@ -85,13 +70,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/zhonger/fortran-tutorial/edit/master/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/zhonger/fortran-tutorial/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
