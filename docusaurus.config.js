@@ -61,6 +61,9 @@ module.exports = {
       ],
       copyright: `版权所有 © ${new Date().getFullYear()} zhonger, 此网站使用 Docusaurus 构建。 `,
     },
+    prism: {
+      additionalLanguages: ['fortran'],
+    },
   },
   presets: [
     [
