@@ -1,4 +1,6 @@
 const isI18nStaging = process.env.I18N_STAGING === 'true';
+const math = require('remark-math');
+const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Fortran 从入门到实践',
@@ -10,6 +12,15 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'zhonger', // Usually your GitHub org/user name.
   projectName: 'fortran-tutorial', // Usually your repo name.
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X',
+      crossorigin: 'anonymous',
+    },
+  ],
   themeConfig: {
     navbar: {
       title: 'Fortran 从入门到实践',
@@ -63,6 +74,7 @@ module.exports = {
     },
     prism: {
       additionalLanguages: ['fortran'],
+      theme: require('prism-react-renderer/themes/github'),
     },
   },
   presets: [
@@ -74,6 +86,9 @@ module.exports = {
           // Please change this to your repo.
           editUrl:
             'https://github.com/zhonger/fortran-tutorial/edit/master/',
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
