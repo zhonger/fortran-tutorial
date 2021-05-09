@@ -70,12 +70,13 @@ module.exports = {
           ],
         },
       ],
-      copyright: `版权所有 © ${new Date().getFullYear()} zhonger, 此网站使用 Docusaurus 构建。 `,
+      copyright: `版权所有 © ${new Date().getFullYear()} <a href="https://lisz.me">zhonger</a>, 此网站使用 <a href="https://docusaurus.io/">Docusaurus</a> 构建。 `,
     },
     prism: {
       additionalLanguages: ['fortran'],
       theme: require('prism-react-renderer/themes/github'),
     },
+    hideableSidebar: true,
   },
   presets: [
     [
@@ -89,6 +90,7 @@ module.exports = {
           remarkPlugins: [math],
           rehypePlugins: [katex],
           showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
         blog: {
           showReadingTime: true,
