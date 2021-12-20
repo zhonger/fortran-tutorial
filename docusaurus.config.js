@@ -78,6 +78,16 @@ module.exports = {
     },
     hideableSidebar: true,
   },
+  plugins: [
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        changefreq: 'weekly',
+        priority: 0.5,
+        trailingSlash: false,
+      },
+    ],
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
