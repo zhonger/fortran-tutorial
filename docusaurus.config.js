@@ -5,7 +5,7 @@ const katex = require('rehype-katex');
 module.exports = {
   title: 'Fortran 从入门到实践',
   tagline: '从零开始你的 Fortran 之旅',
-  url: 'https://fortran-tutorial.netlify.app',
+  url: 'https://fortran-tutorial.lisz.me',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
