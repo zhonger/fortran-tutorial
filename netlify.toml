@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "https://fortran-tutorial.netlify.app/*"
-  to = "https://fortran-tutorial.netlify.app/:splat"
-  force = true
-  status = 301
