@@ -12,6 +12,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'zhonger', // Usually your GitHub org/user name.
   projectName: 'fortran-tutorial', // Usually your repo name.
+  trailingSlash: false,
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css',
@@ -22,6 +23,7 @@ module.exports = {
     },
   ],
   themeConfig: {
+    metadata: [{name: 'keywords', content: 'fortran, tutorial, quick'}],
     navbar: {
       title: 'Fortran 从入门到实践',
       logo: {
@@ -78,16 +80,6 @@ module.exports = {
     },
     hideableSidebar: true,
   },
-  plugins: [
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        changefreq: 'weekly',
-        priority: 0.5,
-        trailingSlash: false,
-      },
-    ],
-  ],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -114,6 +106,10 @@ module.exports = {
         gtag: {
           trackingID: 'G-ZL1C0Z88NL',
           anonymizeIP: true,
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
         },
       },
     ],
