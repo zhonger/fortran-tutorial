@@ -275,16 +275,16 @@ print *, i, sum      ! 输出 i 的值为 5，sum 的值为 15
 
 ### cycle 语句
 
-cycle 语句与 exit 语句正好表示了相反的意思，它指示程序在满足条件时继续执行循环、不满足条件时跳出循环。如示例 16 所示，这个 cycle 语句的效果与示例 14、15 的完全一致。
+cycle 语句与 exit 语句正好表示了相反的意思，它指示程序在满足条件时继续执行后续语句，不满足条件时跳过后续语句进入下一个循环。如示例 16 所示，这个 cycle 语句的效果与示例 14、15 的有些差别。
 
 ```fortran
 !!! 示例 16
 sum = 0
 do i = 1, 10
-    sum = sum + i
     if (sum <= 10) cycle
+    sum = sum + i
 enddo
-print *, i, sum      ! 输出 i 的值仍为 5，sum 的值仍为 15
+print *, i, sum      ! 输出 i 的值为 11，sum 的值仍为 15
 ```
 
 ### 多重循环下的 exit 与 goto 语句
