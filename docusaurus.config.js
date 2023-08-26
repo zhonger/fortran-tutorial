@@ -78,7 +78,11 @@ module.exports = {
       additionalLanguages: ['fortran'],
       theme: require('prism-react-renderer/themes/github'),
     },
-    hideableSidebar: true,
+    docs: {
+      sidebar: {
+        hideable: true,
+      }
+    },
   },
   presets: [
     [
